@@ -1,2 +1,2 @@
 # BinarysearchwedwithJS.github.io
-<a href='https://mehereesh.github.io/BinarysearchwedwithJS.github.io/'>Link of deployment</a>
+<a href='https://mehereesh.github.io/BinarysearchwedwithJS.github.io/' target="_blank">Link of deployment</a>
