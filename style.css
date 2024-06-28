@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    /* add 3D moving color balls background */
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    animation: move-background 3s infinite;
+  }
+  
+  @keyframes move-background {
+    0% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  .ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007bff;
+    animation: move-ball 3s infinite;
+  }
+  
+  @keyframes move-ball {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  .ball:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .ball:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .ball:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  
+  .ball:nth-child(5) {
+    animation-delay: 2s;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* add z-index to bring container to front */
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+  }
+  
+  .cube {
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
+  }
+  
+  .cube-wrap {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #result {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
